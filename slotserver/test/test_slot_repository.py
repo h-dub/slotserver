@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MIT
 
 import pytest
-import slots.slot_repository as sr
+import slotserver.slot_repository as sr
 from pathlib import Path
 
 
