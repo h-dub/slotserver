@@ -83,6 +83,13 @@ class TestSlotRepositoryInterface(object):
         with pytest.raises(TypeError):
             sr.SlotRepositoryInterface()
 
+    def test_subclasshook(self):
+        # Interface should be a subclass of itself
+        assert issubclass(sr.SlotRepositoryInterface,
+                          sr.SlotRepositoryInterface) is True
+        assert issubclass(object,
+                          sr.SlotRepositoryInterface) is False
+
 
 @pytest.mark.parametrize("repo_factory", [_mem_repo, _pickled_repo])
 class TestSlotRepositoryFunctional(object):
@@ -90,6 +97,10 @@ class TestSlotRepositoryFunctional(object):
     Generic public interface test.
     Repositories should have a factory added to the parmeterization list
     '''
+
+    def test_subclasshook(self, repo_factory, tmp_path):
+        repo = repo_factory(tmp_path)
+        assert issubclass(type(repo), sr.SlotRepositoryInterface) is True
 
     def test_get_existing(self, repo_factory, tmp_path):
         repo = repo_factory(tmp_path)

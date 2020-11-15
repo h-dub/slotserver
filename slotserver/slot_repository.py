@@ -34,35 +34,30 @@ class SlotRepositoryInterface(metaclass=abc.ABCMeta):
         A SlotNotFoundException will be raised if the slot is missing
         and raise_error is True
         '''
-        raise NotImplementedError
 
     @abc.abstractmethod
     def upsert(self, slot_id: str, subslot_id: str, data: object) -> None:
         '''
         Upsert data in a slot.
         '''
-        raise NotImplementedError
 
     @abc.abstractmethod
     def delete(self, slot_id: str, subslot_id: str) -> None:
         '''
         Delete data in a slot.
         '''
-        raise NotImplementedError
 
     @abc.abstractmethod
     def slots(self) -> object:
         '''
         Returns a list of existing slot_ids
         '''
-        raise NotImplementedError
 
     @abc.abstractmethod
     def subslots(self, slot_id: str) -> object:
         '''
         Returns a list of existing subslot_ids under a slot_id
         '''
-        raise NotImplementedError
 
 
 class SlotNotFoundException(Exception):
