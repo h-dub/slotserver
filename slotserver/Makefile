@@ -3,7 +3,7 @@
 
 # .PHONY defines parts of the makefile that are not dependant on any specific file
 # This is most often used to store functions
-.PHONY: all test clean lint coverage publish
+.PHONY: all test clean lint coverage
 .DEFAULT_GOAL: all
 
 all: lint test
