@@ -1,3 +1,5 @@
+// Copyright (c) 2020 Hugh Wade
+// SPDX-License-Identifier: MIT
 #include <FastLED.h>
 #define NUM_LEDS 3
 #define DATA_PIN 12
