@@ -1,0 +1,36 @@
+interactions:
+- request:
+    body: '{"slot_ids": ["SLOT1", "SLOT2"], "subslot_ids": ["SUBSLOT1", "SUBSLOT2"]}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '73'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.22.0
+    method: POST
+    uri: http://127.0.0.1:5000/consume
+  response:
+    body:
+      string: '{"SLOT1":{"SUBSLOT1":"SLOTDATA1","SUBSLOT2":null},"SLOT2":{"SUBSLOT1":null,"SUBSLOT2":null}}
+
+        '
+    headers:
+      Content-Length:
+      - '93'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 26 Nov 2020 16:29:38 GMT
+      Server:
+      - Werkzeug/1.0.1 Python/3.8.5
+    status:
+      code: 200
+      message: OK
+version: 1
