@@ -1,0 +1,6 @@
+-e .
+
+flake8
+pytest
+pytest-vcr
+pytest-cov
