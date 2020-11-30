@@ -1,11 +1,9 @@
 # Copyright (c) 2020 Hugh Wade
 # SPDX-License-Identifier: MIT
-# import slotserver.slot_repository as sr
-# import slotserver.slot_service as ss
 import pytest
+from flask import url_for
 import slotserver.slot_flask_server as sfr
 import slotserver.slot_repository as sr
-from flask import url_for
 
 
 SLOT_1 = "SLOT1"
