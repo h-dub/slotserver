@@ -1,7 +1,7 @@
 # Copyright (c) 2020 Hugh Wade
 # SPDX-License-Identifier: MIT
 import pytest
-import slotserver.slot_flask_client as sfc
+import slotserver.slot_http_client as sfc
 
 SLOT_1 = "SLOT1"
 SLOT_2 = "SLOT2"
