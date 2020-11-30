@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="slotserver",
-    version="0.0.3",
+    version="0.0.4",
     author="Hugh Wade",
     author_email="hugh@hdub.io",
     description="IOT Dashboard data relay",
